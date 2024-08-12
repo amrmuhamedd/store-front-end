@@ -39,7 +39,6 @@ export default function Register() {
       }
     } catch (error) {
       if (error.response && error.response.status === 400) {
-        console.log(error);
         setErrorMessage(
           error.response.data.message ||
             "Invalid input. Please check your details and try again."

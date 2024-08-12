@@ -31,7 +31,7 @@ function PaymentStatus() {
     mode: query.get("mode"),
     signature: query.get("signature"),
   };
-  console.log({ key: `${import.meta.env.VITE_KASHIER_SECERT}` });
+
   const fetchOrder = useCallback(async () => {
     try {
       const res = await axios.get(

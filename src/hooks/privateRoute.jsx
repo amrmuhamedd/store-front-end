@@ -7,7 +7,7 @@ const PrivateRoute = ({ element: Component, roles = [] }) => {
   const user = JSON.parse(localStorage.getItem("user"));
   const hasRequiredRole =
     roles.length === 0 || (user && roles.includes(user.role));
-  console.log({ isAuthenticated, user });
+
   return isAuthenticated && hasRequiredRole ? (
     Component
   ) : isAuthenticated && !hasRequiredRole ? (
