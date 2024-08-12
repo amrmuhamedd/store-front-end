@@ -50,13 +50,6 @@ yarn install
 yarn dev
 ```
 
-Now you can see your API docs at: `http://localhost:3000/api-docs/#/`
-## Running with Docker
-
-after cloning the repo just run: 
-```bash
-docker-compose up --build
-```
 Now you can see your API docs at: `http://localhost:5173`
 
 
