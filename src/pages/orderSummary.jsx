@@ -61,27 +61,19 @@ function PaymentStatus() {
     }));
 
     try {
-      const res = await axios.post(
-        "https://test-api.kashier.io/paymentRequest?currency=EGP",
-        {
-          paymentType: "professional",
-          merchantId: import.meta.env.VITE_KASHIER_MID,
-          isSuspendedPayment: true,
-          customerName: user.name,
-          description: "Try to pay order again",
-          dueDate: tomorrow,
-          totalAmount: orderDetails.amount,
-          invoiceReferenceId: uuidv4(),
-          invoiceItems: items || [],
-          state: "submitted",
-          tax: 0,
-        },
-        {
-          headers: {
-            Authorization: `${import.meta.env.VITE_KASHIER_SECERT}`,
-          },
-        }
-      );
+      const res = await axios.post("/api/invoices/", {
+        paymentType: "professional",
+        merchantId: import.meta.env.VITE_KASHIER_MID,
+        isSuspendedPayment: true,
+        customerName: user.name,
+        description: "Try to pay order again",
+        dueDate: tomorrow,
+        totalAmount: orderDetails.amount,
+        invoiceReferenceId: uuidv4(),
+        invoiceItems: items || [],
+        state: "submitted",
+        tax: 0,
+      });
       setPaymentLink(
         `http://merchant.kashier.io/en/prepay/${res.data.response.paymentRequestId}?mode=test`
       );
