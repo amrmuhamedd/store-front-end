@@ -150,7 +150,12 @@ function PaymentStatus() {
             Payment Link:{" "}
             <span className="font-bold">
               {paymentLink ? (
-                <a href={paymentLink} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={paymentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500"
+                >
                   Payment Link
                 </a>
               ) : (
