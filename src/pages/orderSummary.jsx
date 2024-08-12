@@ -80,7 +80,7 @@ function PaymentStatus() {
     } catch (error) {
       console.error("Failed to create payment link:", error);
     }
-  }, [order, orderDetails.amount, user.name]);
+  }, [order, orderDetails.amount]);
 
   useEffect(() => {
     const signatureIsValid = validateSignature(
