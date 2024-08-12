@@ -52,6 +52,12 @@ yarn dev
 
 Now you can see your API docs at: `http://localhost:5173`
 
+To create an Admin and view orders:
+
+You can create a new user with the role ADMIN through the [API documentation](https://store-back-end-7v7c.onrender.com/api-docs/#/).
+Alternatively, you can use my credentials:
+Email: amr@test.com
+Password: password123
 
 ## live preview
 you can see the live preview [here](https://store-front-end-rouge.vercel.app/)
